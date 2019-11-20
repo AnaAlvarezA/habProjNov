@@ -1,0 +1,5 @@
+/** This option, as the name suggests, tells JSHint that your code uses ECMAScript 6 specific syntax. */
+
+{
+    "esversion": 6
+}

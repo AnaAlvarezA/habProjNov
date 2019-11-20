@@ -1,0 +1,33 @@
+{
+    "name": "node-back",
+    "version": "0.0.0",
+    "description": "Nodejs-JWT-Authentication-MySQL-ORM-Sequelize",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Nodejs",
+        "Express",
+        "JWT",
+        "Sequelize",
+        "MySQL",
+        "Authentication"
+    ],
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "cors": "^2.8.5",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mysql2": "^1.6.5",
+        "sequelize": "^5.19.1"
+    },
+    "engines": {
+        "node": "13.1.0"
+    },
+    "devDependencies": {
+        "electron-rebuild": "^1.8.6"
+    }
+}
