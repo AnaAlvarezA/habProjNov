@@ -14,28 +14,34 @@ const db = require("./server/config/db.config.js");
 
 const Role = db.role;
 
-/**  Create table if not exists */
+const controller = require("./server/controller/controller.js");
+
+
+/**  Create table if not exists --- La tabla se sobreescribira */
+
 db.sequelize
     .sync({
-        force: false
+        force: true
     })
     .then(() => {
         console.log("Create table");
-        /* initial(); */
+        app.delete("/api/deleterole/:id", controller.deleteRole);
+        initial();
+
     });
 
 /** Create a Server */
 
-/*process.env.API_PORT = 3000;*/
 
 app.listen(process.env.API_PORT, () =>
     console.log(`Listening on port ${process.env.API_PORT}`)
 );
 
-console.log(`Listening on port ${process.env.AUTH_BCRYPT_SALT_ROUNDS}`)
 
 
-/* function initial() {
+
+function initial() {
+
     Role.create({
         id: 1,
         name: "CLIENTE"
@@ -50,4 +56,5 @@ console.log(`Listening on port ${process.env.AUTH_BCRYPT_SALT_ROUNDS}`)
         id: 3,
         name: "ADMIN"
     });
-} */
+
+}
