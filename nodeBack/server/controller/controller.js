@@ -168,7 +168,7 @@ exports.managementBoard = (req, res) => {
         });
 };
 
-/**For services */
+/** SERVICES */
 
 exports.serviceAllContent = (req, res) => {
     Service.findAll({
@@ -227,7 +227,7 @@ exports.deleteService = (req, res) => {
         });
 };
 
-exports.serviceCreate = (req, res) => {
+exports.createService = (req, res) => {
     Service.create({
             name: req.body.name,
             description: req.body.description,
@@ -247,6 +247,7 @@ exports.serviceCreate = (req, res) => {
         });
 };
 
+/** ROLES */
 
 exports.deleteRole = (req, res) => {
     Role.destroy({
