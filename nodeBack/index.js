@@ -17,7 +17,7 @@ const Role = db.role;
 const controller = require("./server/controller/controller.js");
 
 
-/**  Create table if not exists --- La tabla se sobreescribira */
+/**  Force Create table  */
 
 db.sequelize
     .sync({
